@@ -14,7 +14,7 @@ extension Color {
 struct ContentView: View {
     let data = (1...6).map { "\($0)" }
     var column = Array(repeating: GridItem(.flexible(), spacing: 10), count: 3)
-
+    
     let columns = [
         GridItem(.adaptive(minimum: 80))
     ]
@@ -24,18 +24,27 @@ struct ContentView: View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: column, spacing: 10){
-                        ForEach(self.data, id: \.self){ data in
-                            Text(data)
-                                .padding()
+                    ForEach(self.data, id: \.self){ data in
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.offWhite)
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                                .background(Color.offWhite)
                                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            VStack{
+                                Text("200")
+                                    .font(.system(size: 40))
+                                    .fontWeight(.bold)
+                                Text("Euros")
+                                    .font(.system(size: 20))
+                            }
+                            .padding()
                         }
+                    }
                 }
             }
             .padding(10)
-            .frame(maxWidth: .infinity, maxHeight: 200)
+            .frame(maxWidth: .infinity, maxHeight: 250)
             HStack() {
                 Spacer()
                 Text(string)
