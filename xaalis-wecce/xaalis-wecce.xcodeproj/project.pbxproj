@@ -23,6 +23,8 @@
 		31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4625E46380007F4CC0 /* KeyPadRow.swift */; };
 		31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
 		31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
+		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
+		31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		31508B3F25E4541A007F4CC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		31508B4625E46380007F4CC0 /* KeyPadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadRow.swift; sourceTree = "<group>"; };
 		31508B4D25E465FE007F4CC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
+		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		31508AF025E44A74007F4CC0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				31E834D725E5BB89007B3BCF /* Entity */,
 				31508B3E25E453FB007F4CC0 /* Extension */,
 				31508B3625E44DC0007F4CC0 /* UI */,
 				31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */,
@@ -181,6 +185,14 @@
 				31508B3F25E4541A007F4CC0 /* Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		31E834D725E5BB89007B3BCF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				31E834D825E5BBC2007B3BCF /* Currency.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +357,7 @@
 				31508B1C25E44A77007F4CC0 /* ContentView.swift in Sources */,
 				31508B3825E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
+				31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31508B4025E4541A007F4CC0 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +371,7 @@
 				31508B1D25E44A77007F4CC0 /* ContentView.swift in Sources */,
 				31508B3925E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31508B1B25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
+				31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31508B4125E4541A007F4CC0 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +459,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -498,6 +514,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

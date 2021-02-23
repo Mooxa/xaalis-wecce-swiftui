@@ -17,9 +17,9 @@ struct KeyPadButton: View {
             Color.clear
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.offWhite)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        .fill(Color.neuBackground)
+                        .shadow(color: .dropShadow, radius: 15, x: 10, y: 10)
+                        .shadow(color: .dropLight, radius: 15, x: -15, y: -15)
                 )
                 .overlay(Text(key))
         }
