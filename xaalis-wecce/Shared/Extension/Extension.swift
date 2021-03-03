@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+struct SelectableButtonStyle: ButtonStyle {
+
+    var isSelected = false
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding()
+            .clipShape(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0))
+            .overlay(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0).stroke(lineWidth: isSelected ? 2.0 : 0.0).foregroundColor(Color.pink))
+            .animation(.linear)
+    }
+}
+
 struct SimpleButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
@@ -17,7 +31,7 @@ struct SimpleButtonStyle: ButtonStyle {
                         .addBorder(Color.white, width: 1, cornerRadius: 10)
                     } else {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.neuBackground)
+                            .fill(Color.offWhite)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                     }
@@ -25,6 +39,8 @@ struct SimpleButtonStyle: ButtonStyle {
             )
     }
 }
+
+
 struct ColorfulButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
@@ -63,6 +79,7 @@ extension Color {
     static let dropLight = Color(hex: "ffffff")
     static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
     static let darkEnd = Color(red: 25 / 255, green: 25 / 255, blue: 30 / 255)
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
 }
 
 extension Color {
@@ -88,13 +105,13 @@ struct DarkBackground<S: Shape>: View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(Color.neuBackground)
+                    .fill(Color.offWhite)
                     .shadow(color: Color.offWhite, radius: 10, x: 5, y: 5)
                     .shadow(color: Color.offWhite, radius: 10, x: -5, y: -5)
 
             } else {
                 shape
-                    .fill(Color.neuBackground)
+                    .fill(Color.offWhite)
                     .shadow(color: Color.offWhite, radius: 10, x: -10, y: -10)
                     .shadow(color: Color.offWhite, radius: 10, x: 10, y: 10)
             }

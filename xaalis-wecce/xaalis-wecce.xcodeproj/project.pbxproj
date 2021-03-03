@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
+		3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
+		312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31508B0D25E44A77007F4CC0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B0C25E44A77007F4CC0 /* Tests_iOS.swift */; };
 		31508B1825E44A77007F4CC0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B1725E44A77007F4CC0 /* Tests_macOS.swift */; };
 		31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */; };
@@ -23,8 +26,11 @@
 		31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4625E46380007F4CC0 /* KeyPadRow.swift */; };
 		31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
 		31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
+		31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
+		31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 		31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
+		31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+Codable.swift"; sourceTree = "<group>"; };
+		312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XaalisWecceViewModel.swift; sourceTree = "<group>"; };
 		31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xaalis_wecceApp.swift; sourceTree = "<group>"; };
 		31508AF225E44A74007F4CC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31508AF325E44A77007F4CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +71,9 @@
 		31508B3F25E4541A007F4CC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		31508B4625E46380007F4CC0 /* KeyPadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadRow.swift; sourceTree = "<group>"; };
 		31508B4D25E465FE007F4CC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
+		319B69A125E5D8FC00750791 /* xaalis-wecce.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "xaalis-wecce.entitlements"; sourceTree = "<group>"; };
 		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +108,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3110422725E7DF9F00BEEA70 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				31E834D725E5BB89007B3BCF /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3110422825E7DFB700BEEA70 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3110422925E7DFC400BEEA70 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3110422925E7DFC400BEEA70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		312C8D8C25E6F3E100C5D4E8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				31508B3625E44DC0007F4CC0 /* UI */,
+				312C8D9425E6F60200C5D4E8 /* View */,
+				312C8D8D25E6F3E900C5D4E8 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		312C8D8D25E6F3E900C5D4E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		312C8D9425E6F60200C5D4E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		31508AEB25E44A74007F4CC0 = {
 			isa = PBXGroup;
 			children = (
+				319B69A125E5D8FC00750791 /* xaalis-wecce.entitlements */,
 				31508AF025E44A74007F4CC0 /* Shared */,
 				31508AFA25E44A77007F4CC0 /* iOS */,
 				31508B0125E44A77007F4CC0 /* macOS */,
@@ -113,9 +174,10 @@
 		31508AF025E44A74007F4CC0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				31E834D725E5BB89007B3BCF /* Entity */,
+				3110422825E7DFB700BEEA70 /* Data */,
+				3110422725E7DF9F00BEEA70 /* Domain */,
+				312C8D8C25E6F3E100C5D4E8 /* Presentation */,
 				31508B3E25E453FB007F4CC0 /* Extension */,
-				31508B3625E44DC0007F4CC0 /* UI */,
 				31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */,
 				31508AF225E44A74007F4CC0 /* ContentView.swift */,
 				31508AF325E44A77007F4CC0 /* Assets.xcassets */,
@@ -354,8 +416,11 @@
 			files = (
 				31508B4725E46380007F4CC0 /* KeyPadRow.swift in Sources */,
 				31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */,
+				312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */,
+				3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
 				31508B1C25E44A77007F4CC0 /* ContentView.swift in Sources */,
 				31508B3825E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
+				31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */,
 				31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
 				31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31508B4025E4541A007F4CC0 /* Extension.swift in Sources */,
@@ -367,8 +432,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */,
+				3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
 				31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */,
+				31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */,
 				31508B1D25E44A77007F4CC0 /* ContentView.swift in Sources */,
+				31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */,
 				31508B3925E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31508B1B25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
 				31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */,
@@ -528,6 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "xaalis-wecce.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PBAGT949Z;
 				ENABLE_PREVIEWS = YES;
@@ -550,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "xaalis-wecce.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PBAGT949Z;
 				ENABLE_PREVIEWS = YES;
@@ -574,6 +644,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3PBAGT949Z;
@@ -598,6 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3PBAGT949Z;

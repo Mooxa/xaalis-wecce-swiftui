@@ -16,8 +16,8 @@ struct KeyPadButton: View {
         Button(action: { self.action(self.key) }) {
             Color.clear
                 .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.neuBackground)
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.offWhite)
                         .shadow(color: .dropShadow, radius: 15, x: 10, y: 10)
                         .shadow(color: .dropLight, radius: 15, x: -15, y: -15)
                 )
