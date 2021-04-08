@@ -7,27 +7,6 @@
 
 import Foundation
 
-enum CurrencyFormat {
-    case cad
-    case cny
-    case eur
-    case gbp
-    case usd
-    case xof
-    
-    //    switch self {
-    //    case .cad : return ("CAD", "$")
-    //    case .cny : return ("CNY", "¥")
-    //    case .eur: return ("EUR","€")
-    //    case .gbp: return ("GBP","£")
-    //    case .usd: return ("USD","$")
-    //    case .xof: return ("XOF")
-    //    default: return .unknown
-    //    }
-}
-extension CurrencyFormat{
-    
-}
 
 struct Currency: Identifiable {
     var id: String
@@ -49,12 +28,26 @@ struct Currencies{
     var rates: Rate
 
     
+    
 }
-struct CurrencyRate: Identifiable {
+class CurrencyRate: Identifiable {
     var id = UUID()
-    var name:String
+    var name: String
     var price: Double
     var symbol: String
+    var isSelected: Bool = false
+    init(name: String, price: Double, symbol: String){
+        self.name = name
+        self.price = price
+        self.symbol = symbol
+    }
+      func chooseCurrency(rate: CurrencyRate){
+        print("0 rate change chosen \(rate)")
+        rate.isSelected = !rate.isSelected
+        
+    }
+    
+
 }
 
 struct Rate {
@@ -64,7 +57,7 @@ struct Rate {
     let gbp: Double
     let usd: Double
     let xof: Double
-    
+   
     func convertToArray() -> [CurrencyRate] {
         var currencyRate = [CurrencyRate]()
         currencyRate.append(CurrencyRate(name: "CAD", price: self.cad, symbol:"$"))
@@ -75,6 +68,8 @@ struct Rate {
         currencyRate.append(CurrencyRate(name: "XOF", price: self.xof, symbol:"F"))
         return currencyRate
     }
+    
+  
     
     
     

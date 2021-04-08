@@ -22,11 +22,11 @@ struct KeyPad: View {
            private func keyWasPressed(_ key: String) {
                switch key {
                case "." where string.contains("."): break
-               case "." where string == "0": string += key
+               case "." where string == "1": string += key
                case "⌫":
                    string.removeLast()
-                   if string.isEmpty { string = "0" }
-               case _ where string == "0": string = key
+                   if string.isEmpty { string = "1" }
+               case _ where string == "1": string = key
                default: string += key
                }
            }
@@ -34,7 +34,7 @@ struct KeyPad: View {
 }
 
 struct KeyPad_Previews: PreviewProvider {
-    @State static var value = "0"
+    @State static var value = "1"
     static var previews: some View {
         KeyPad(string: $value)
     }

@@ -16,8 +16,9 @@ class XaalisWecceViewModel: ObservableObject {
     @Published var breweries: Currencies?
     private var task: AnyCancellable?
     var cancellables = Set<AnyCancellable>()
-    private(set) var  rates = [CurrencyRate]()
-
+    @Published private(set) var  rates = [CurrencyRate]()
+    private var base: String? = "XOF"
+    private var model: CurrencyRate = CurrencyRate(name: "XOF", price: 10.0, symbol: "F")
     var currency = PassthroughSubject<Currencies, Never>()
     var subscriptions = [AnyCancellable]()
     @Published var currencies = Currencies(base: "CAD", date: "2021-02-25", rates: Rate(cad: 1.0, cny: 5.159445, eur: 0.6567, gbp: 0.564736, usd: 0.799827, xof: 430.766776))
@@ -27,25 +28,32 @@ class XaalisWecceViewModel: ObservableObject {
         return priceCurrency == 0 ? currencyPrice : priceCurrency
     }
     
+    func chooseRate(rate: CurrencyRate) {
+        print(" 1 rate chosen \(rate)")
+        model.chooseCurrency(rate: rate)
+        base = rate.name
+        fetchData()
+    }
     
-    func fetchData(base:String?) {
+    func fetchData() {
         guard let baseCurrency = base else {
             return
         }
         let url = "https://api.exchangerate.host/latest?base=\(baseCurrency)&symbols=CAD,EUR,GBP,CNY,USD,XOF"
-
+        
         URLSession.shared.dataTaskPublisher(for: URL(string: url)!)
-        .map { $0.data }
-        .decode(type: Currencies.self, decoder: JSONDecoder())
-        .receive(on: RunLoop.main)
-        .sink(receiveCompletion: { completion in
-          print(completion) // finished
-        }) { [self] currency in
-            rates = currency.rates.convertToArray()
-            currencies = currency
-            print(currency)
-        }.store(in: &subscriptions)
-      
+            .map { $0.data }
+            .decode(type: Currencies.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                
+                print(completion) // finished
+            }) { [self] currency in
+                rates = currency.rates.convertToArray()
+                currencies = currency
+                print(currency)
+            }.store(in: &subscriptions)
+        
     }
     
     

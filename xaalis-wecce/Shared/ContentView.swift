@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-
+import Combine
 struct ContentView: View {
     private var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
-
+    
     @State private var isToggled = false
     @ObservedObject var viewModel = XaalisWecceViewModel()
     
@@ -24,7 +24,7 @@ struct ContentView: View {
                         }
                     }.padding()
                 }
-                .frame(width: .infinity, height: 360)
+//                .frame(width: .infinity, height: .infinity)
                 HStack {
                     Spacer()
                     Text(price)
@@ -38,8 +38,11 @@ struct ContentView: View {
                 }
                 .padding(10)
                 .padding([.leading, .trailing])
+                .onReceive(viewModel.$currencies) { value in
+                    self.viewModel.fetchData()
+                       }
                 .onAppear {
-                    self.viewModel.fetchData(base: "XOF")
+                    self.viewModel.fetchData()
                 }
                 KeyPad(string: $price)
                     .padding()
@@ -48,7 +51,7 @@ struct ContentView: View {
         }
     }
     
-    @State private var price = "0"
+    @State private var price = "1"
 }
 
 struct ContentView_Previews: PreviewProvider {

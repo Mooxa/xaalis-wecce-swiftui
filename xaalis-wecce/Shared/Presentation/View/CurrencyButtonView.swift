@@ -10,9 +10,11 @@ import SwiftUI
 struct CurrencyButtonView: View {
     private let date: String
     private let price: Double
-    private let rate: CurrencyRate
-    @State var buttonStyle = SelectableButtonStyle()
+    private var rate: CurrencyRate
     @State  var isSelected = false
+    @ObservedObject var viewModel = XaalisWecceViewModel()
+    //    @State var buttonStyle = SelectableButtonStyle()
+    
     init(date: String, rate: CurrencyRate, price: Double) {
         self.date = date
         self.price = price
@@ -20,15 +22,13 @@ struct CurrencyButtonView: View {
     }
     var body: some View {
         let priceCurrency = Double(rate.price) * Double(price)
-        Button(action: {
-            self.isSelected = !self.isSelected
-            print("isSelected now is \(self.isSelected ? "true" : "false")")
-        }) {
+        
+        Button(action: {}) {
             ZStack {
-                RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0, style: .continuous)
+                RoundedRectangle(cornerRadius: rate.isSelected ? 10.0 : 10.0, style: .continuous)
                     .fill(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: self.isSelected ? 10.0 : 10.0))
-                    .overlay(RoundedRectangle(cornerRadius: self.isSelected ? 10.0 : 10.0).stroke(lineWidth: self.isSelected ? 2.0 : 0.0).foregroundColor(Color.pink))
+                    .clipShape(RoundedRectangle(cornerRadius: rate.isSelected ? 10.0 : 10.0))
+                    .overlay(RoundedRectangle(cornerRadius: rate.isSelected ? 10.0 : 10.0).stroke(lineWidth: self.isSelected ? 2.0 : 0.0).foregroundColor(Color.green))
                     .animation(.linear)
                     .shadow(radius: 10)
                 VStack {
@@ -44,6 +44,10 @@ struct CurrencyButtonView: View {
                     Text(date)
                         .font(.system(size: 10))
                         .foregroundColor(.black)
+                }
+                .onTapGesture {
+                    print("0 rate chosen \(rate)")
+                    viewModel.chooseRate(rate: rate)
                 }
                 . padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

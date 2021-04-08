@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct SelectableButtonStyle: ButtonStyle {
-
-    var isSelected = false
-
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
-            .clipShape(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0))
-            .overlay(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0).stroke(lineWidth: isSelected ? 2.0 : 0.0).foregroundColor(Color.pink))
-            .animation(.linear)
-    }
-}
+//struct SelectableButtonStyle: ButtonStyle {
+//
+//    var isSelected = false
+//
+//    func makeBody(configuration: Self.Configuration) -> some View {
+//        configuration.label
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//            .padding()
+//            .clipShape(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0))
+//            .overlay(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0).stroke(lineWidth: isSelected ? 2.0 : 0.0).foregroundColor(Color.pink))
+//            .animation(.linear)
+//    }
+//}
 
 struct SimpleButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
