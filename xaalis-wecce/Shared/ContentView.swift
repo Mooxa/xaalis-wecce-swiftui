@@ -14,6 +14,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = XaalisWecceViewModel()
     
     var body: some View {
+        
         ZStack {
             Color.white
             VStack{
@@ -24,7 +25,7 @@ struct ContentView: View {
                         }
                     }.padding()
                 }
-//                .frame(width: .infinity, height: .infinity)
+                //                .frame(width: .infinity, height: .infinity)
                 HStack {
                     Spacer()
                     Text(price)
@@ -38,9 +39,6 @@ struct ContentView: View {
                 }
                 .padding(10)
                 .padding([.leading, .trailing])
-                .onReceive(viewModel.$currencies) { value in
-                    self.viewModel.fetchData()
-                       }
                 .onAppear {
                     self.viewModel.fetchData()
                 }

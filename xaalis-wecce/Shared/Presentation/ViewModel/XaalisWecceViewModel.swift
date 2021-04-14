@@ -46,7 +46,6 @@ class XaalisWecceViewModel: ObservableObject {
             .decode(type: Currencies.self, decoder: JSONDecoder())
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
-                
                 print(completion) // finished
             }) { [self] currency in
                 rates = currency.rates.convertToArray()

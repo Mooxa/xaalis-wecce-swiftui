@@ -12,7 +12,7 @@ struct CurrencyButtonView: View {
     private let price: Double
     private var rate: CurrencyRate
     @State  var isSelected = false
-    @ObservedObject var viewModel = XaalisWecceViewModel()
+    var viewModel = XaalisWecceViewModel()
     //    @State var buttonStyle = SelectableButtonStyle()
     
     init(date: String, rate: CurrencyRate, price: Double) {
