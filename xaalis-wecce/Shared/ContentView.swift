@@ -21,7 +21,7 @@ struct ContentView: View {
                 ScrollView {
                     LazyVGrid(columns: flexibleLayout, spacing: 10) {
                         ForEach(viewModel.rates) { currency in
-                            CurrencyButtonView(date: viewModel.currencies.date, rate: currency, price: Double(price) ?? 0.0)
+                            CurrencyButtonView(date: viewModel.currencies.date, rate: currency, price: Double(price) ?? 0.0, viewModel: $viewModel)
                         }
                     }.padding()
                 }

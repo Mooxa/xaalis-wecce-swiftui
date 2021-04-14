@@ -12,13 +12,14 @@ struct CurrencyButtonView: View {
     private let price: Double
     private var rate: CurrencyRate
     @State  var isSelected = false
-    var viewModel = XaalisWecceViewModel()
+    var viewModel: Binding<XaalisWecceViewModel>
     //    @State var buttonStyle = SelectableButtonStyle()
     
-    init(date: String, rate: CurrencyRate, price: Double) {
+    init(date: String, rate: CurrencyRate, price: Double, viewModel: Binding<XaalisWecceViewModel>) {
         self.date = date
         self.price = price
         self.rate = rate
+        self.viewModel = viewModel
     }
     var body: some View {
         let priceCurrency = Double(rate.price) * Double(price)
