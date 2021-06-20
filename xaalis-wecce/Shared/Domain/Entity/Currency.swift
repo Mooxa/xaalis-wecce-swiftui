@@ -44,19 +44,12 @@ class CurrencyRate: Identifiable, Equatable {
     var name: String
     var price: Double
     var symbol: String
-    var isSelected: Bool = false
     init(name: String, price: Double, symbol: String){
         self.name = name
         self.price = price
         self.symbol = symbol
     }
-      func chooseCurrency(rate: CurrencyRate){
-        print("0 rate change chosen \(rate)")
-        rate.isSelected = !rate.isSelected
-        
-    }
     
-
 }
 
 struct Rate {

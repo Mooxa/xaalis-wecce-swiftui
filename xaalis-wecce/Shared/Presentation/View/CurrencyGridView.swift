@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct CurrencyGridView<Label: View>: View{
+struct CurrencyGridView: View{
     @Binding var currencies: Currencies //
     @Binding var selection: Int // Currently selected tab
-    @State var price: Double
-    let label: (CurrencyRate, Bool) -> Label
+    @Binding var price: String
     var body: some View {
         let flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
         
@@ -27,7 +26,7 @@ struct CurrencyGridView<Label: View>: View{
     private func itemView(rate: CurrencyRate) -> some View {
         let index = self.currencies.currenciesRate.firstIndex(of: rate)!
         let isSelected = index == selection
-//        let priceCurrency = Double(rate.price) * Double(price)
+        let priceCurrency = Double(rate.price) * (Double(price) ?? 1 )
         return Button(action: {
             // Allows for animated transitions of the underline,
             // as well as other views on the same screen
@@ -35,13 +34,11 @@ struct CurrencyGridView<Label: View>: View{
                 self.selection = index
             }
         }) {
-            
-//            label(rate, isSelected)
             ZStack {
-                RoundedRectangle(cornerRadius:  10.0, style: .continuous)
+                RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0, style: .continuous)
                     .fill(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius:  10.0))
-                    .overlay(RoundedRectangle(cornerRadius:  10.0).stroke(lineWidth: 0.0).foregroundColor(Color.blue))
+                    .clipShape(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0))
+                    .overlay(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0).stroke(lineWidth: isSelected ? 2.0 : 0.0).foregroundColor(Color.blue))
                     .animation(.linear)
                     .shadow(radius: 10)
                 VStack {
@@ -54,18 +51,15 @@ struct CurrencyGridView<Label: View>: View{
                         .fontWeight(.bold)
                         .foregroundColor(Color.blue)
                     Spacer()
-                    Text(currencies.date)
-                        .font(.system(size: 10))
-                        .foregroundColor(.black)
                 }
-
+                
                 . padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
     }
+    
 }
-
 //struct CurrencyGridView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        CurrencyGridView()
