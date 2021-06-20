@@ -8,24 +8,48 @@
 import SwiftUI
 import Combine
 struct ContentView: View {
-    private var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
-    
-    @State private var isToggled = false
     @ObservedObject var viewModel = XaalisWecceViewModel()
+    @State private var price = "1"
     
     var body: some View {
         
         ZStack {
             Color.white
             VStack{
-                ScrollView {
-                    LazyVGrid(columns: flexibleLayout, spacing: 10) {
-                        ForEach(viewModel.rates) { currency in
-                            CurrencyButtonView(date: viewModel.currencies.date, rate: currency, price: Double(price) ?? 0.0, viewModel: $viewModel)
-                        }
-                    }.padding()
+                
+                CurrencyGridView(currencies: $viewModel.currencies, selection: $viewModel.selectedTab, price: Double(price) ?? 1) {
+                    rate, isSelected in
+                   
                 }
-                //                .frame(width: .infinity, height: .infinity)
+                .padding()
+//                CurrencyGridView(currencies: $viewModel.currencies, selection: , price: Double(price) ?? 1) { rate, isSelected in
+//                    let priceCurrency = Double(rate.price) * Double(price)
+//                    ZStack {
+//                        RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0, style: .continuous)
+//                            .fill(Color.white)
+//                            .clipShape(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0))
+//                            .overlay(RoundedRectangle(cornerRadius: isSelected ? 10.0 : 10.0).stroke(lineWidth: isSelected ? 2.0 : 0.0).foregroundColor(Color.green))
+//                            .animation(.linear)
+//                            .shadow(radius: 10)
+//                        VStack {
+//                            Text(rate.name)
+//                                .font(.system(size: 15))
+//                                .foregroundColor(Color.red)
+//                            Spacer()
+//                            Text("\(priceCurrency, specifier: "%.2f") \(rate.symbol)")
+//                                .font(.system(size: 20))
+//                                .fontWeight(.bold)
+//                                .foregroundColor(Color.blue)
+//                            Spacer()
+//                            Text(currencies.date)
+//                                .font(.system(size: 10))
+//                                .foregroundColor(.black)
+//                        }
+//                        
+//                        . padding()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                    }
+//                }
                 HStack {
                     Spacer()
                     Text(price)
@@ -49,7 +73,7 @@ struct ContentView: View {
         }
     }
     
-    @State private var price = "1"
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

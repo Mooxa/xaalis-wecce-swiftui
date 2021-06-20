@@ -22,15 +22,24 @@ struct Currency: Identifiable {
     
 }
 
-struct Currencies{
+struct Currencies {
     var base: String
     var date: String
     var rates: Rate
-
+    var currenciesRate: [CurrencyRate]  {
+        return rates.convertToArray()
+      }
     
     
 }
-class CurrencyRate: Identifiable {
+class CurrencyRate: Identifiable, Equatable {
+    static func == (lhs: CurrencyRate, rhs: CurrencyRate) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    
+   
+    
     var id = UUID()
     var name: String
     var price: Double
