@@ -10,8 +10,6 @@
 		3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
 		3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
 		312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
-		313A1186267F96A2005AD0C4 /* CurrencyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A1185267F96A2005AD0C4 /* CurrencyGridView.swift */; };
-		313A1187267F96A2005AD0C4 /* CurrencyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A1185267F96A2005AD0C4 /* CurrencyGridView.swift */; };
 		31508B0D25E44A77007F4CC0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B0C25E44A77007F4CC0 /* Tests_iOS.swift */; };
 		31508B1825E44A77007F4CC0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B1725E44A77007F4CC0 /* Tests_macOS.swift */; };
 		31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */; };
@@ -55,7 +53,6 @@
 /* Begin PBXFileReference section */
 		3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+Codable.swift"; sourceTree = "<group>"; };
 		312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XaalisWecceViewModel.swift; sourceTree = "<group>"; };
-		313A1185267F96A2005AD0C4 /* CurrencyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyGridView.swift; sourceTree = "<group>"; };
 		31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xaalis_wecceApp.swift; sourceTree = "<group>"; };
 		31508AF225E44A74007F4CC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31508AF325E44A77007F4CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */,
-				313A1185267F96A2005AD0C4 /* CurrencyGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -420,7 +416,6 @@
 			files = (
 				31508B4725E46380007F4CC0 /* KeyPadRow.swift in Sources */,
 				31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */,
-				313A1186267F96A2005AD0C4 /* CurrencyGridView.swift in Sources */,
 				312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */,
 				3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
 				31508B1C25E44A77007F4CC0 /* ContentView.swift in Sources */,
@@ -438,7 +433,6 @@
 			files = (
 				31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */,
 				3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
-				313A1187267F96A2005AD0C4 /* CurrencyGridView.swift in Sources */,
 				31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */,
 				31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */,
 				31508B1D25E44A77007F4CC0 /* ContentView.swift in Sources */,

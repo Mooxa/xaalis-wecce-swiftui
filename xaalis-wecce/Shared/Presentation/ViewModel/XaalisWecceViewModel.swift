@@ -19,7 +19,6 @@ class XaalisWecceViewModel: ObservableObject {
     @Published private(set) var  rates = [CurrencyRate]()
     var selectedTab : Int = 0 {
         didSet {
-            print("\(self.selectedTab)")
             chooseRate(rate: currencies.currenciesRate[self.selectedTab])
         }
     }
@@ -36,7 +35,6 @@ class XaalisWecceViewModel: ObservableObject {
     }
     
     func chooseRate(rate: CurrencyRate) {
-        print(" 1 rate chosen \(rate)")
 //        model.chooseCurrency(rate: rate)
         base = rate.name
         fetchData()

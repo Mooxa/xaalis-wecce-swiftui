@@ -16,7 +16,7 @@ struct ContentView: View {
         ZStack {
             Color.white
             VStack{
-                CurrencyGridView(currencies: $viewModel.currencies, selection: $viewModel.selectedTab, price: $price)
+                CurrencyButtonView(currencies: $viewModel.currencies, selection: $viewModel.selectedTab, price: $price)
                 HStack {
                     Spacer()
                     Text(price)
