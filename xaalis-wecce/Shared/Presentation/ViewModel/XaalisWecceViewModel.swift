@@ -22,7 +22,7 @@ class XaalisWecceViewModel: ObservableObject {
             chooseRate(rate: currencies.currenciesRate[self.selectedTab])
         }
     }
-    private var base: String? = "XOF"
+    private var base: String? = "CAD"
     private var model: CurrencyRate = CurrencyRate(name: "XOF", price: 10.0, symbol: "F")
     var currency = PassthroughSubject<Currencies, Never>()
     var subscriptions = [AnyCancellable]()
@@ -35,13 +35,12 @@ class XaalisWecceViewModel: ObservableObject {
     }
     
     func chooseRate(rate: CurrencyRate) {
-//        model.chooseCurrency(rate: rate)
         base = rate.name
         fetchData()
     }
     
     func fetchData() {
-        guard let baseCurrency = base else {
+        guard let baseCurrency = base   else {
             return
         }
         let url = "https://api.exchangerate.host/latest?base=\(baseCurrency)&symbols=CAD,EUR,GBP,CNY,USD,XOF"
@@ -53,7 +52,7 @@ class XaalisWecceViewModel: ObservableObject {
             .sink(receiveCompletion: { completion in
                 print(completion) // finished
             }) { [self] currency in
-                rates = currency.rates.convertToArray()
+                rates = currency.currenciesRate
                 currencies = currency
                 print(currency)
             }.store(in: &subscriptions)

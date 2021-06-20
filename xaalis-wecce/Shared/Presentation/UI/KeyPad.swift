@@ -26,7 +26,7 @@ struct KeyPad: View {
                case "⌫":
                    string.removeLast()
                    if string.isEmpty { string = "1" }
-               case _ where string == "1": string = key
+//               case _ where string == "1": string = key
                default: string += key
                }
            }

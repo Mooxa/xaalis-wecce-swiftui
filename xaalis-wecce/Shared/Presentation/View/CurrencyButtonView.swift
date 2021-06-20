@@ -26,7 +26,14 @@ struct CurrencyButtonView: View {
     private func itemView(rate: CurrencyRate) -> some View {
         let index = self.currencies.currenciesRate.firstIndex(of: rate)!
         let isSelected = index == selection
-        let priceCurrency = Double(rate.price) * (Double(price) ?? 1 )
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.usesGroupingSeparator = true
+        formatter.currencyCode = rate.name
+        formatter.maximumFractionDigits = 2
+        let priceCurrency =
+        formatter.string(from: NSNumber(value: Double(rate.price) * (Double(price) ?? 1 ))) ?? "$0"
         return Button(action: {
             // Allows for animated transitions of the underline,
             // as well as other views on the same screen
@@ -46,11 +53,14 @@ struct CurrencyButtonView: View {
                         .font(.system(size: 15))
                         .foregroundColor(Color.red)
                     Spacer()
-                    Text("\(priceCurrency, specifier: "%.2f") \(rate.symbol)")
+                    Text("\(priceCurrency)")
                         .font(.system(size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(Color.blue)
                     Spacer()
+                    Text(currencies.date)
+                        .font(.system(size: 10))
+                        .foregroundColor(.black)
                 }
                 
                 . padding()
