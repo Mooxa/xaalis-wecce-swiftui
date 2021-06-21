@@ -11,11 +11,12 @@ struct CurrencyButtonView: View {
     @Binding var currencies: Currencies //
     @Binding var selection: Int // Currently selected tab
     @Binding var price: String
+//    @Binding var isShow: String
     var body: some View {
         let flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
         
         ScrollView {
-            LazyVGrid(columns: flexibleLayout, spacing: 10) {
+            LazyVGrid(columns: flexibleLayout, spacing: 5) {
                 ForEach(currencies.currenciesRate, id: \.name) { currency in
                     self.itemView(rate: currency)
                 }

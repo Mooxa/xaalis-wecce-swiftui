@@ -26,6 +26,8 @@
 		31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4625E46380007F4CC0 /* KeyPadRow.swift */; };
 		31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
 		31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
+		318DE0BC26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
+		318DE0BD26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
 		31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
@@ -71,6 +73,7 @@
 		31508B3F25E4541A007F4CC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		31508B4625E46380007F4CC0 /* KeyPadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadRow.swift; sourceTree = "<group>"; };
 		31508B4D25E465FE007F4CC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
+		318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencybuttonChartView.swift; sourceTree = "<group>"; };
 		319B69A125E5D8FC00750791 /* xaalis-wecce.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "xaalis-wecce.entitlements"; sourceTree = "<group>"; };
 		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButtonView.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */,
+				318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,6 +423,7 @@
 				312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */,
 				3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
 				31508B1C25E44A77007F4CC0 /* ContentView.swift in Sources */,
+				318DE0BC26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */,
 				31508B3825E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */,
 				31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
@@ -436,6 +441,7 @@
 				31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */,
 				31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */,
 				31508B1D25E44A77007F4CC0 /* ContentView.swift in Sources */,
+				318DE0BD26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */,
 				31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */,
 				31508B3925E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31508B1B25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,

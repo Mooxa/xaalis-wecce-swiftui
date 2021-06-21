@@ -13,9 +13,6 @@ enum DataTaskError: Error {
 
 class XaalisWecceViewModel: ObservableObject {
     private let url = "https://api.exchangerate.host/latest?base=XOF&symbols=CAD,EUR,GBP,CNY,USD,XOF"
-    @Published var breweries: Currencies?
-    private var task: AnyCancellable?
-    var cancellables = Set<AnyCancellable>()
     @Published private(set) var  rates = [CurrencyRate]()
     var selectedTab : Int = 0 {
         didSet {
@@ -23,11 +20,10 @@ class XaalisWecceViewModel: ObservableObject {
         }
     }
     private var base: String? = "CAD"
-    private var model: CurrencyRate = CurrencyRate(name: "XOF", price: 10.0, symbol: "F")
     var currency = PassthroughSubject<Currencies, Never>()
     var subscriptions = [AnyCancellable]()
     @Published var currencies =
-    Currencies(base:  "CAD", date: "2021-02-25", rates: Rate(cad: 1.0, cny: 5.159445, eur: 0.6567, gbp: 0.564736, usd: 0.799827, xof: 430.766776))
+    Currencies(base:  "CAD", date: "2021-02-25", rates: Rate(cad: 1, cny: 1, eur: 1, gbp: 1, usd: 1, xof: 1, aed: 1, chf: 1, cnh: 1, cve: 1, qar: 1, tnd: 1, ngn: 1))
     
     func calculPriceCurrency(currencyPrice: Double, inputPrice: Double) -> Double {
         let priceCurrency = Double(currencyPrice) * Double(inputPrice)
@@ -40,10 +36,10 @@ class XaalisWecceViewModel: ObservableObject {
     }
     
     func fetchData() {
-        guard let baseCurrency = base   else {
+        guard let baseCurrency = base else {
             return
         }
-        let url = "https://api.exchangerate.host/latest?base=\(baseCurrency)&symbols=CAD,EUR,GBP,CNY,USD,XOF"
+        let url = "https://api.exchangerate.host/latest?base=\(baseCurrency)&symbols=CAD,EUR,GBP,CNY,USD,XOF,AED,CHF,CNH,CVE,QAR,TND,NGN"
         
         URLSession.shared.dataTaskPublisher(for: URL(string: url)!)
             .map { $0.data }
@@ -54,7 +50,6 @@ class XaalisWecceViewModel: ObservableObject {
             }) { [self] currency in
                 rates = currency.currenciesRate
                 currencies = currency
-                print(currency)
             }.store(in: &subscriptions)
         
     }
