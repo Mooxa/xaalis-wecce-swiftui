@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct xaalis_wecceApp: App {
+struct XaalisWecceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

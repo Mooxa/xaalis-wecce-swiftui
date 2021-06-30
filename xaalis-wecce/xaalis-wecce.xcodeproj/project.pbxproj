@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
-		3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */; };
 		312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31508B0D25E44A77007F4CC0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B0C25E44A77007F4CC0 /* Tests_iOS.swift */; };
 		31508B1825E44A77007F4CC0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B1725E44A77007F4CC0 /* Tests_macOS.swift */; };
@@ -28,10 +26,42 @@
 		31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
 		318DE0BC26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
 		318DE0BD26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
+		319A6B092681029200EAD5BC /* SymbolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* SymbolListView.swift */; };
+		319A6B0A2681029200EAD5BC /* SymbolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* SymbolListView.swift */; };
+		319A6B0C2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */; };
+		319A6B0D2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */; };
+		319A6B0F2681073800EAD5BC /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0E2681073700EAD5BC /* Symbol.swift */; };
+		319A6B102681073800EAD5BC /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0E2681073700EAD5BC /* Symbol.swift */; };
+		31ABF68D268CC02000059AD1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF68C268CC02000059AD1 /* Request.swift */; };
+		31ABF68F268CC04A00059AD1 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF68E268CC04A00059AD1 /* NetworkDispatcher.swift */; };
+		31ABF691268CC07E00059AD1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF690268CC07E00059AD1 /* ApiClient.swift */; };
+		31ABF695268CC17E00059AD1 /* CurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF694268CC17E00059AD1 /* CurrencyRequest.swift */; };
+		31ABF697268CC36600059AD1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF696268CC36600059AD1 /* Constant.swift */; };
+		31ABF69A268CC5A200059AD1 /* CurrencyRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF699268CC5A200059AD1 /* CurrencyRemoteDataSource.swift */; };
+		31ABF69C268CC5E400059AD1 /* CurrencyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF69B268CC5E400059AD1 /* CurrencyEndpoint.swift */; };
+		31ABF6A6268CD2D300059AD1 /* XaalissCurrencyConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6A5268CD2D300059AD1 /* XaalissCurrencyConverterView.swift */; };
+		31ABF6A9268CD45000059AD1 /* Xaaliss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6A7268CD45000059AD1 /* Xaaliss.xcdatamodeld */; };
+		31ABF6AA268CD45000059AD1 /* Xaaliss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6A7268CD45000059AD1 /* Xaaliss.xcdatamodeld */; };
+		31ABF6AC268CD47800059AD1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6AB268CD47800059AD1 /* PersistenceController.swift */; };
+		31ABF6AD268CD47800059AD1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6AB268CD47800059AD1 /* PersistenceController.swift */; };
+		31ABF6AF268CD49B00059AD1 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6AE268CD49B00059AD1 /* DBHelper.swift */; };
+		31ABF6B0268CD49B00059AD1 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6AE268CD49B00059AD1 /* DBHelper.swift */; };
+		31ABF6B2268CD4BA00059AD1 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6B1268CD4BA00059AD1 /* CoreDataHelper.swift */; };
+		31ABF6B3268CD4BA00059AD1 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6B1268CD4BA00059AD1 /* CoreDataHelper.swift */; };
+		31ABF6BF268D102700059AD1 /* CountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6BE268D102700059AD1 /* CountryRequest.swift */; };
+		31ABF6C0268D102700059AD1 /* CountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6BE268D102700059AD1 /* CountryRequest.swift */; };
+		31ABF6C2268D106100059AD1 /* CountryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */; };
+		31ABF6C3268D106100059AD1 /* CountryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */; };
+		31ABF6C6268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */; };
+		31ABF6C7268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */; };
 		31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 		31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
+		31ED3F9C2683ADF000738DBE /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* SymbolRow.swift */; };
+		31ED3F9D2683ADF000738DBE /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* SymbolRow.swift */; };
+		31ED3F9F2683B2CB00738DBE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9E2683B2CB00738DBE /* Country.swift */; };
+		31ED3FA02683B2CB00738DBE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9E2683B2CB00738DBE /* Country.swift */; };
 		31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +83,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+Codable.swift"; sourceTree = "<group>"; };
 		312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XaalisWecceViewModel.swift; sourceTree = "<group>"; };
 		31508AF125E44A74007F4CC0 /* xaalis_wecceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xaalis_wecceApp.swift; sourceTree = "<group>"; };
 		31508AF225E44A74007F4CC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,8 +103,28 @@
 		31508B4625E46380007F4CC0 /* KeyPadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadRow.swift; sourceTree = "<group>"; };
 		31508B4D25E465FE007F4CC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
 		318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencybuttonChartView.swift; sourceTree = "<group>"; };
+		319A6B082681029200EAD5BC /* SymbolListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListView.swift; sourceTree = "<group>"; };
+		319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListViewModel.swift; sourceTree = "<group>"; };
+		319A6B0E2681073700EAD5BC /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		319B69A125E5D8FC00750791 /* xaalis-wecce.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "xaalis-wecce.entitlements"; sourceTree = "<group>"; };
+		31ABF68C268CC02000059AD1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		31ABF68E268CC04A00059AD1 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		31ABF690268CC07E00059AD1 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		31ABF694268CC17E00059AD1 /* CurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRequest.swift; sourceTree = "<group>"; };
+		31ABF696268CC36600059AD1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		31ABF699268CC5A200059AD1 /* CurrencyRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRemoteDataSource.swift; sourceTree = "<group>"; };
+		31ABF69B268CC5E400059AD1 /* CurrencyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEndpoint.swift; sourceTree = "<group>"; };
+		31ABF6A5268CD2D300059AD1 /* XaalissCurrencyConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XaalissCurrencyConverterView.swift; sourceTree = "<group>"; };
+		31ABF6A8268CD45000059AD1 /* Xaaliss.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xaaliss.xcdatamodel; sourceTree = "<group>"; };
+		31ABF6AB268CD47800059AD1 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		31ABF6AE268CD49B00059AD1 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		31ABF6B1268CD4BA00059AD1 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		31ABF6BE268D102700059AD1 /* CountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequest.swift; sourceTree = "<group>"; };
+		31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEndpoint.swift; sourceTree = "<group>"; };
+		31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRemoteDataSource.swift; sourceTree = "<group>"; };
 		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		31ED3F9B2683ADF000738DBE /* SymbolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRow.swift; sourceTree = "<group>"; };
+		31ED3F9E2683B2CB00738DBE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +171,6 @@
 		3110422825E7DFB700BEEA70 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3110422925E7DFC400BEEA70 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -130,7 +178,8 @@
 		3110422925E7DFC400BEEA70 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3110422A25E7DFDB00BEEA70 /* Currency+Codable.swift */,
+				31ABF694268CC17E00059AD1 /* CurrencyRequest.swift */,
+				31ABF69B268CC5E400059AD1 /* CurrencyEndpoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,7 +197,6 @@
 		312C8D8D25E6F3E900C5D4E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,7 +204,6 @@
 		312C8D9425E6F60200C5D4E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */,
 				318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */,
 			);
 			path = View;
@@ -178,6 +225,8 @@
 		31508AF025E44A74007F4CC0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				31ABF69D268CD10800059AD1 /* Feature */,
+				31ABF68A268CBFEE00059AD1 /* Core */,
 				3110422825E7DFB700BEEA70 /* Data */,
 				3110422725E7DF9F00BEEA70 /* Domain */,
 				312C8D8C25E6F3E100C5D4E8 /* Presentation */,
@@ -253,10 +302,197 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		31E834D725E5BB89007B3BCF /* Entity */ = {
+		31ABF68A268CBFEE00059AD1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF692268CC09C00059AD1 /* LocalStorage */,
+				31ABF68B268CBFF500059AD1 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		31ABF68B268CBFF500059AD1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF68C268CC02000059AD1 /* Request.swift */,
+				31ABF68E268CC04A00059AD1 /* NetworkDispatcher.swift */,
+				31ABF690268CC07E00059AD1 /* ApiClient.swift */,
+				31ABF696268CC36600059AD1 /* Constant.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		31ABF692268CC09C00059AD1 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6A7268CD45000059AD1 /* Xaaliss.xcdatamodeld */,
+				31ABF6AB268CD47800059AD1 /* PersistenceController.swift */,
+				31ABF6AE268CD49B00059AD1 /* DBHelper.swift */,
+				31ABF6B1268CD4BA00059AD1 /* CoreDataHelper.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		31ABF698268CC58500059AD1 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF699268CC5A200059AD1 /* CurrencyRemoteDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		31ABF69D268CD10800059AD1 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6B4268CD4FF00059AD1 /* Country */,
+				31ABF69E268CD11500059AD1 /* XaalissCurrency */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		31ABF69E268CD11500059AD1 /* XaalissCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6A1268CD13000059AD1 /* Presentation */,
+				31ABF6A0268CD12900059AD1 /* Data */,
+				31ABF69F268CD12100059AD1 /* Domain */,
+			);
+			path = XaalissCurrency;
+			sourceTree = "<group>";
+		};
+		31ABF69F268CD12100059AD1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6A2268CD17D00059AD1 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		31ABF6A0268CD12900059AD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3110422925E7DFC400BEEA70 /* Models */,
+				31ABF698268CC58500059AD1 /* Data Source */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		31ABF6A1268CD13000059AD1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6A4268CD1B000059AD1 /* View */,
+				31ABF6A3268CD19600059AD1 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		31ABF6A2268CD17D00059AD1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				31E834D825E5BBC2007B3BCF /* Currency.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		31ABF6A3268CD19600059AD1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		31ABF6A4268CD1B000059AD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */,
+				31ABF6A5268CD2D300059AD1 /* XaalissCurrencyConverterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31ABF6B4268CD4FF00059AD1 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6B8268CD53600059AD1 /* Presentation */,
+				31ABF6B7268CD52000059AD1 /* Data */,
+				31ABF6B5268CD50600059AD1 /* Domain */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		31ABF6B5268CD50600059AD1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6B6268CD51200059AD1 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		31ABF6B6268CD51200059AD1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				31ED3F9E2683B2CB00738DBE /* Country.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		31ABF6B7268CD52000059AD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6C4268D10CC00059AD1 /* Data Source */,
+				31ABF6BD268D0FFE00059AD1 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		31ABF6B8268CD53600059AD1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6BA268CD61400059AD1 /* View */,
+				31ABF6B9268CD5E600059AD1 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		31ABF6B9268CD5E600059AD1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		31ABF6BA268CD61400059AD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				319A6B082681029200EAD5BC /* SymbolListView.swift */,
+				31ED3F9B2683ADF000738DBE /* SymbolRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31ABF6BD268D0FFE00059AD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6BE268D102700059AD1 /* CountryRequest.swift */,
+				31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31ABF6C4268D10CC00059AD1 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		31E834D725E5BB89007B3BCF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				319A6B0E2681073700EAD5BC /* Symbol.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -271,6 +507,7 @@
 				31508AF425E44A77007F4CC0 /* Sources */,
 				31508AF525E44A77007F4CC0 /* Frameworks */,
 				31508AF625E44A77007F4CC0 /* Resources */,
+				31ABF6BC268CE4A900059AD1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,22 +650,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31ABF6BC268CE4A900059AD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31508AF425E44A77007F4CC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ABF68F268CC04A00059AD1 /* NetworkDispatcher.swift in Sources */,
 				31508B4725E46380007F4CC0 /* KeyPadRow.swift in Sources */,
+				31ABF6B2268CD4BA00059AD1 /* CoreDataHelper.swift in Sources */,
 				31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */,
+				31ABF6AF268CD49B00059AD1 /* DBHelper.swift in Sources */,
 				312C8D8F25E6F40400C5D4E8 /* XaalisWecceViewModel.swift in Sources */,
-				3110422B25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
+				31ABF6C2268D106100059AD1 /* CountryEndpoint.swift in Sources */,
+				31ABF695268CC17E00059AD1 /* CurrencyRequest.swift in Sources */,
 				31508B1C25E44A77007F4CC0 /* ContentView.swift in Sources */,
+				31ABF6A9268CD45000059AD1 /* Xaaliss.xcdatamodeld in Sources */,
+				31ABF697268CC36600059AD1 /* Constant.swift in Sources */,
+				31ABF6AC268CD47800059AD1 /* PersistenceController.swift in Sources */,
 				318DE0BC26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */,
 				31508B3825E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
+				31ABF68D268CC02000059AD1 /* Request.swift in Sources */,
+				31ED3F9C2683ADF000738DBE /* SymbolRow.swift in Sources */,
+				31ABF6A6268CD2D300059AD1 /* XaalissCurrencyConverterView.swift in Sources */,
+				31ABF69C268CC5E400059AD1 /* CurrencyEndpoint.swift in Sources */,
+				31ED3F9F2683B2CB00738DBE /* Country.swift in Sources */,
+				319A6B0C2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */,
 				31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */,
+				31ABF6BF268D102700059AD1 /* CountryRequest.swift in Sources */,
+				319A6B092681029200EAD5BC /* SymbolListView.swift in Sources */,
 				31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
+				319A6B0F2681073800EAD5BC /* Symbol.swift in Sources */,
 				31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31508B4025E4541A007F4CC0 /* Extension.swift in Sources */,
+				31ABF691268CC07E00059AD1 /* ApiClient.swift in Sources */,
+				31ABF6C6268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */,
+				31ABF69A268CC5A200059AD1 /* CurrencyRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,16 +713,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */,
-				3110422C25E7DFDB00BEEA70 /* Currency+Codable.swift in Sources */,
+				31ABF6C7268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */,
 				31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */,
+				31ABF6B3268CD4BA00059AD1 /* CoreDataHelper.swift in Sources */,
 				31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */,
 				31508B1D25E44A77007F4CC0 /* ContentView.swift in Sources */,
 				318DE0BD26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */,
 				31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */,
+				31ABF6C0268D102700059AD1 /* CountryRequest.swift in Sources */,
+				31ABF6B0268CD49B00059AD1 /* DBHelper.swift in Sources */,
+				31ED3F9D2683ADF000738DBE /* SymbolRow.swift in Sources */,
+				31ED3FA02683B2CB00738DBE /* Country.swift in Sources */,
+				319A6B0D2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */,
 				31508B3925E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
+				319A6B0A2681029200EAD5BC /* SymbolListView.swift in Sources */,
+				31ABF6AD268CD47800059AD1 /* PersistenceController.swift in Sources */,
 				31508B1B25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
+				319A6B102681073800EAD5BC /* Symbol.swift in Sources */,
 				31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */,
+				31ABF6C3268D106100059AD1 /* CountryEndpoint.swift in Sources */,
 				31508B4125E4541A007F4CC0 /* Extension.swift in Sources */,
+				31ABF6AA268CD45000059AD1 /* Xaaliss.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +894,7 @@
 				DEVELOPMENT_TEAM = 3PBAGT949Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -630,7 +917,7 @@
 				DEVELOPMENT_TEAM = 3PBAGT949Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,6 +1119,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		31ABF6A7268CD45000059AD1 /* Xaaliss.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				31ABF6A8268CD45000059AD1 /* Xaaliss.xcdatamodel */,
+			);
+			currentVersion = 31ABF6A8268CD45000059AD1 /* Xaaliss.xcdatamodel */;
+			path = Xaaliss.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 31508AEC25E44A74007F4CC0 /* Project object */;
 }
