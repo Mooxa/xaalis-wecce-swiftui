@@ -8,50 +8,34 @@
 import SwiftUI
 
 struct SymbolRow: View {
-  let country: Country
+  let currency: CurrencyRate
+  @State var selected: Bool = false
+  @ObservedObject var viewModel = SymbolListViewModel()
+  var saveCurrencyCode: ((_ currencyName: String, _ currencyCode: String) -> Void)
+  
   var body: some View {
-    HStack(alignment: .top) {
-      AsyncImage(url: URL(string: country.flag)!) { phase in
-        if let image = phase.image {
-          image
-            .resizable()
-        } else if phase.error != nil {
-          Color.red // Indicates an error.
-        } else {
-          Color.blue // Acts as a placeholder.
-        }
-      }
-      .clipShape(Circle())
-      .frame(width: 50, height: 50)
-      .overlay(Text(country.alpha3Code)
-                .foregroundColor(.white)
-                .background(.ultraThinMaterial)
-                .font(.system(size: 20, weight: .heavy)))
-      VStack(alignment: .leading) {
-        Text(country.name)
-          .font(.headline)
-          .multilineTextAlignment(.leading)
-        Text("\(country.currencies[0].code ?? "NONE") ")
-          .foregroundColor(.secondary)
-      }
+    HStack(alignment: .center) {
+
+      Text("\(currency.name) - ")
+        .font(.headline)
+        .multilineTextAlignment(.leading)
+      Text(viewModel.getCurrencyName(currency.name) ?? "")
+        .foregroundColor(.secondary)
       Spacer()
-      Image(systemName: "plus.circle")
+      Image(systemName: selected || viewModel.isSaving(code: currency.name) ? "checkmark.circle" : "plus.circle")
         .foregroundColor(.blue)
         .font(.system(size: 25))
+        .onTapGesture {
+          self.selected = true
+          saveCurrencyCode(viewModel.getCurrencyName(currency.name) ?? "", currency.name)
+        }
     }
     .padding(6)
   }
 }
 
-struct SymbolRow_Previews: PreviewProvider {
-  static var previews: some View {
-    SymbolRow(country:
-                Country(name: "Senegal",
-                        alpha2Code: "SN", alpha3Code: "SEN",
-                        currencies:
-                          [CurrencyCountry(code: "XOF",
-                                           name: "West African CFA franc",
-                                           symbol: "Fr")],
-                        flag: "https://restcountries.eu/data/sen.svg"))
-  }
-}
+// struct SymbolRow_Previews: PreviewProvider {
+//  static var previews: some View {
+//    SymbolRow(currency: CurrencyRate(name: "XOF", price: 124))
+//  }
+// }

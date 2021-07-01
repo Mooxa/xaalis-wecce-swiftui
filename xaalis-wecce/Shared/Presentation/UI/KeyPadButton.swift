@@ -13,12 +13,16 @@ struct KeyPadButton: View {
     Button(action: { self.action(self.key) }, label: {
       Color.clear
         .overlay(
-          RoundedRectangle(cornerRadius: 50)
-            .background(.ultraThinMaterial)
+          RoundedRectangle(cornerRadius: 180)
+
+            .background(.clear)
+            .foregroundColor(.clear)
         )
         .overlay(Text(key)
                   .font(.system(size: 30)))
     })
+      .buttonStyle(.bordered)
+      .controlSize(.regular)
   }
   enum ActionKey: EnvironmentKey {
     static var defaultValue: (String) -> Void { { _ in } }

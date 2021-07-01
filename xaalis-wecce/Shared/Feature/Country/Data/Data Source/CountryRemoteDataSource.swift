@@ -10,10 +10,10 @@ import Combine
 
 final class CountryRemoteDataSource: CountryRequest {
 
-  let apiClient = APIClient(baseURL: "https://restcountries.eu")
+  let apiClient = APIClient()
   var cancellables = Set<AnyCancellable>()
 
-  func getCountryList(completion: @escaping (Result<[Country], NetworkRequestError>) -> Void) {
+  func getCountryList(completion: @escaping (Result<Currency, NetworkRequestError>) -> Void) {
     let cancellable =  apiClient.dispatch(CountryEndpoint())
       .sink(receiveCompletion: { result in
         switch result {

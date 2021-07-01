@@ -10,10 +10,10 @@ import Combine
 final class CurrencyRemoteDataSource: CurrencyRequest {
   let apiClient = APIClient()
   var cancellables = Set<AnyCancellable>()
-  func getCurrencyList(base: String, completion: @escaping (Result<Currency, NetworkRequestError>) -> Void) {
+  func getCurrencyList(base: String, symbols: String, completion: @escaping (Result<Currency, NetworkRequestError>) -> Void) {
     var parameters: [URLQueryItem] {
       return [URLQueryItem(name: "base", value: base),
-              URLQueryItem(name: "symbols", value: "CAD,EUR,GBP,CNY,USD,XOF,AED,CHF,CNH,CVE,QAR,TND,NGN")
+              URLQueryItem(name: "symbols", value: symbols)
       ]
     }
     let cancellable =  apiClient.dispatch(CurrencyEndpoint(parameters: parameters))

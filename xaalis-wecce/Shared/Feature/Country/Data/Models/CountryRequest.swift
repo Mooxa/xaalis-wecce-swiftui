@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CountryRequest {
-    func getCountryList(completion: @escaping (Result<[Country], NetworkRequestError>) -> Void)
+    func getCountryList(completion: @escaping (Result<Currency, NetworkRequestError>) -> Void)
 }

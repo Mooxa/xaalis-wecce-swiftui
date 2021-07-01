@@ -51,7 +51,6 @@ extension Request {
     urlComponents.path = "\(urlComponents.path)\(path)"
     urlComponents.queryItems = parameters
     guard let finalURL = urlComponents.url else { return nil }
-    print(finalURL)
     var request = URLRequest(url: finalURL)
     request.httpMethod = method.rawValue
     request.httpBody = requestBodyFrom(params: body)

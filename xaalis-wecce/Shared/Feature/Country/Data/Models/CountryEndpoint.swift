@@ -9,7 +9,7 @@ import Foundation
 
 struct CountryEndpoint: Request {
   var parameters: [URLQueryItem]?
-  typealias ReturnType = [Country]
-  var path: String = "/rest/v2/all"
+  typealias ReturnType = Currency
+  var path: String = "/latest"
   var method: HTTPMethod = .get
 }

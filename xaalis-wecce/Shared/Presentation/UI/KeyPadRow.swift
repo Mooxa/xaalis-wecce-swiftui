@@ -13,6 +13,7 @@ struct KeyPadRow: View {
     HStack {
       ForEach(keys, id: \.self) { key in
         KeyPadButton(key: key)
+          .background(Color.clear)
       }
     }
   }

@@ -17,7 +17,7 @@ struct KeyPad: View {
       KeyPadRow(keys: ["7", "8", "9"])
       KeyPadRow(keys: [".", "0", "⌫"])
     }
-    .background(.ultraThinMaterial)
+    .background(.clear)
     .environment(\.keyPadButtonAction, self.keyWasPressed(_:))
   }
 

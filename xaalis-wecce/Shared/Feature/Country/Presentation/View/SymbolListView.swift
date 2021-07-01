@@ -10,13 +10,15 @@ import SwiftUI
 struct SymbolListView: View {
   @ObservedObject var viewModel = SymbolListViewModel()
   @State var selected: Bool  = false
-  @Environment(\.presentationMode) var presentationMode
+  @Environment(\.dismiss) var dismiss
   @State private var searchText = ""
 
   var body: some View {
     NavigationView {
-      List(searchResults, id: \.alpha3Code) { country in
-        SymbolRow(country: country)
+      List(searchResults, id: \.name) { currency in
+        SymbolRow(currency: currency) { currencyName, currencyCode in
+          viewModel.saveCurrencyLocally(currencyName: currencyName, currencyCode: currencyCode)
+        }
       }
       .task {
         viewModel.fetchCountry()
@@ -25,24 +27,23 @@ struct SymbolListView: View {
         viewModel.fetchCountry()
       }
       .searchable(text: $searchText) {
-        ForEach(searchResults, id: \.alpha3Code) { result in
+        ForEach(searchResults, id: \.name) { result in
           Text("Are you looking for \(result.name)?").searchCompletion(result.name)
         }
       }
       .navigationTitle("Choose Symbol")
-      .navigationBarItems(trailing: Button(action: { presentationMode.wrappedValue.dismiss() }, label: {
-        Text("Save")
-          .foregroundColor(.blue)
-          .font(.system(size: 20))
-          .padding()
-      }))
+      .toolbar {
+        Button("Save") {
+          dismiss()
+        }
+      }
     }
   }
-  var searchResults: [Country] {
+  var searchResults: [CurrencyRate] {
     if searchText.isEmpty {
-      return viewModel.countries
+      return viewModel.allCurrencies
     } else {
-      return viewModel.countries.filter { $0.name.contains(searchText) }
+      return viewModel.allCurrencies.filter { $0.name.contains(searchText) }
     }
   }
 }

@@ -56,6 +56,7 @@
 		31ABF6C7268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */; };
 		31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
+		31E0AD03268DF24400168256 /* CurrencyLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0AD02268DF24400168256 /* CurrencyLocalDataSource.swift */; };
 		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 		31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 		31ED3F9C2683ADF000738DBE /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* SymbolRow.swift */; };
@@ -122,6 +123,7 @@
 		31ABF6BE268D102700059AD1 /* CountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequest.swift; sourceTree = "<group>"; };
 		31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEndpoint.swift; sourceTree = "<group>"; };
 		31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRemoteDataSource.swift; sourceTree = "<group>"; };
+		31E0AD02268DF24400168256 /* CurrencyLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLocalDataSource.swift; sourceTree = "<group>"; };
 		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		31ED3F9B2683ADF000738DBE /* SymbolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRow.swift; sourceTree = "<group>"; };
 		31ED3F9E2683B2CB00738DBE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		31ABF698268CC58500059AD1 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
+				31E0AD02268DF24400168256 /* CurrencyLocalDataSource.swift */,
 				31ABF699268CC5A200059AD1 /* CurrencyRemoteDataSource.swift */,
 			);
 			path = "Data Source";
@@ -695,6 +698,7 @@
 				31ABF69C268CC5E400059AD1 /* CurrencyEndpoint.swift in Sources */,
 				31ED3F9F2683B2CB00738DBE /* Country.swift in Sources */,
 				319A6B0C2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */,
+				31E0AD03268DF24400168256 /* CurrencyLocalDataSource.swift in Sources */,
 				31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */,
 				31ABF6BF268D102700059AD1 /* CountryRequest.swift in Sources */,
 				319A6B092681029200EAD5BC /* SymbolListView.swift in Sources */,

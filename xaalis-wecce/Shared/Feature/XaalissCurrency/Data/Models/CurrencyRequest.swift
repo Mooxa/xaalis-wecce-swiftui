@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CurrencyRequest {
-    func getCurrencyList(base: String, completion: @escaping (Result<Currency, NetworkRequestError>) -> Void)
+  func getCurrencyList(base: String, symbols: String, completion: @escaping (Result<Currency, NetworkRequestError>) -> Void)
 }
