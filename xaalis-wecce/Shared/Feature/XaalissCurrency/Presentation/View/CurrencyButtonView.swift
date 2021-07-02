@@ -15,9 +15,15 @@ struct CurrencyButtonView: View {
   var body: some View {
     let flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
     ScrollView {
+      self.itemView(rate: self.currencies.currenciesRate[selection])
+        .padding()
+
       LazyVGrid(columns: flexibleLayout, spacing: 5) {
         ForEach(currencies.currenciesRate, id: \.name) { currency in
-          self.itemView(rate: currency)
+          if self.currencies.currenciesRate[selection] != currency {
+            self.itemView(rate: currency)
+          }
+
         }
       }.padding()
     }

@@ -11,7 +11,9 @@ import SwiftUI
 struct XaalisWecceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          OnboardingLaunchView()
+            .environmentObject(ViewLaunch())
         }
+
     }
 }

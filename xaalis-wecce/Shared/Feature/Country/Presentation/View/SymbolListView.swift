@@ -12,6 +12,7 @@ struct SymbolListView: View {
   @State var selected: Bool  = false
   @Environment(\.dismiss) var dismiss
   @State private var searchText = ""
+  @EnvironmentObject var viewlaunch: ViewLaunch
 
   var body: some View {
     NavigationView {
@@ -31,9 +32,10 @@ struct SymbolListView: View {
           Text("Are you looking for \(result.name)?").searchCompletion(result.name)
         }
       }
-      .navigationTitle("Choose Symbol")
+      .navigationTitle("Choose Currency")
       .toolbar {
         Button("Save") {
+          self.viewlaunch.currentPage = "ContentView"
           dismiss()
         }
       }
