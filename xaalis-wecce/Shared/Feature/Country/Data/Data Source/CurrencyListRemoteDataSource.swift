@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class CountryRemoteDataSource: CountryRequest {
+final class CurrencyListRemoteDataSource: CountryRequest {
 
   let apiClient = APIClient()
   var cancellables = Set<AnyCancellable>()

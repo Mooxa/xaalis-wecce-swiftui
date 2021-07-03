@@ -20,7 +20,7 @@ struct OnboardingView: View {
       Button {
         UserDefaults.standard.set(true, forKey: "LaunchBefore")
         withAnimation {
-          self.viewlaunch.currentPage = "SymbolListView"
+          self.viewlaunch.currentPage = "CurrencyListView"
         }
       } label: {
         Text("Continue").frame(maxWidth: 400)

@@ -14,3 +14,17 @@ extension View {
       .overlay(roundedRect.strokeBorder(content, lineWidth: width))
   }
 }
+
+extension String {
+  func getCurrencyName() -> String? {
+    let locale: Locale = .current
+    let currency = locale.localizedString(forCurrencyCode: self)
+    return currency
+  }
+
+  func getSymbolForCurrencyCode() -> String? {
+    let result = Locale.availableIdentifiers.map { Locale(identifier: $0) }.first { $0.currencyCode == self }
+    return result?.currencySymbol
+  }
+
+}

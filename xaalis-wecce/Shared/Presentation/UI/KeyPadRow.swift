@@ -14,6 +14,7 @@ struct KeyPadRow: View {
       ForEach(keys, id: \.self) { key in
         KeyPadButton(key: key)
           .background(Color.clear)
+        
       }
     }
   }

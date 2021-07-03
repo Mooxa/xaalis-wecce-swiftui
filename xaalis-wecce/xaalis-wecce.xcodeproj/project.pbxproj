@@ -24,12 +24,14 @@
 		31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4625E46380007F4CC0 /* KeyPadRow.swift */; };
 		31508B4E25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
 		31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31508B4D25E465FE007F4CC0 /* KeyPad.swift */; };
+		3173607E26909DB800EB4E55 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173607D26909DB800EB4E55 /* LoadingState.swift */; };
+		3173607F26909DB800EB4E55 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173607D26909DB800EB4E55 /* LoadingState.swift */; };
 		318DE0BC26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
 		318DE0BD26807C71003EEFF7 /* CurrencybuttonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */; };
-		319A6B092681029200EAD5BC /* SymbolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* SymbolListView.swift */; };
-		319A6B0A2681029200EAD5BC /* SymbolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* SymbolListView.swift */; };
-		319A6B0C2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */; };
-		319A6B0D2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */; };
+		319A6B092681029200EAD5BC /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* CurrencyListView.swift */; };
+		319A6B0A2681029200EAD5BC /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B082681029200EAD5BC /* CurrencyListView.swift */; };
+		319A6B0C2681071B00EAD5BC /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* CurrencyListViewModel.swift */; };
+		319A6B0D2681071B00EAD5BC /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0B2681071B00EAD5BC /* CurrencyListViewModel.swift */; };
 		319A6B0F2681073800EAD5BC /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0E2681073700EAD5BC /* Symbol.swift */; };
 		319A6B102681073800EAD5BC /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A6B0E2681073700EAD5BC /* Symbol.swift */; };
 		31ABF68D268CC02000059AD1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF68C268CC02000059AD1 /* Request.swift */; };
@@ -52,8 +54,8 @@
 		31ABF6C0268D102700059AD1 /* CountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6BE268D102700059AD1 /* CountryRequest.swift */; };
 		31ABF6C2268D106100059AD1 /* CountryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */; };
 		31ABF6C3268D106100059AD1 /* CountryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */; };
-		31ABF6C6268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */; };
-		31ABF6C7268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */; };
+		31ABF6C6268D10E900059AD1 /* CurrencyListRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CurrencyListRemoteDataSource.swift */; };
+		31ABF6C7268D10E900059AD1 /* CurrencyListRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABF6C5268D10E900059AD1 /* CurrencyListRemoteDataSource.swift */; };
 		31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C8D8E25E6F40400C5D4E8 /* XaalisWecceViewModel.swift */; };
 		31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
 		31E0AD03268DF24400168256 /* CurrencyLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0AD02268DF24400168256 /* CurrencyLocalDataSource.swift */; };
@@ -63,8 +65,8 @@
 		31E0AD0C268E5A6400168256 /* OnboardingLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0AD0A268E5A6400168256 /* OnboardingLaunchView.swift */; };
 		31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
 		31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E834D825E5BBC2007B3BCF /* Currency.swift */; };
-		31ED3F9C2683ADF000738DBE /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* SymbolRow.swift */; };
-		31ED3F9D2683ADF000738DBE /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* SymbolRow.swift */; };
+		31ED3F9C2683ADF000738DBE /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* CurrencyRow.swift */; };
+		31ED3F9D2683ADF000738DBE /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9B2683ADF000738DBE /* CurrencyRow.swift */; };
 		31ED3F9F2683B2CB00738DBE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9E2683B2CB00738DBE /* Country.swift */; };
 		31ED3FA02683B2CB00738DBE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3F9E2683B2CB00738DBE /* Country.swift */; };
 		31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */; };
@@ -107,9 +109,10 @@
 		31508B3F25E4541A007F4CC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		31508B4625E46380007F4CC0 /* KeyPadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadRow.swift; sourceTree = "<group>"; };
 		31508B4D25E465FE007F4CC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
+		3173607D26909DB800EB4E55 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		318DE0BB26807C71003EEFF7 /* CurrencybuttonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencybuttonChartView.swift; sourceTree = "<group>"; };
-		319A6B082681029200EAD5BC /* SymbolListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListView.swift; sourceTree = "<group>"; };
-		319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListViewModel.swift; sourceTree = "<group>"; };
+		319A6B082681029200EAD5BC /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
+		319A6B0B2681071B00EAD5BC /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		319A6B0E2681073700EAD5BC /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		319B69A125E5D8FC00750791 /* xaalis-wecce.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "xaalis-wecce.entitlements"; sourceTree = "<group>"; };
 		31ABF68C268CC02000059AD1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -126,12 +129,12 @@
 		31ABF6B1268CD4BA00059AD1 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		31ABF6BE268D102700059AD1 /* CountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequest.swift; sourceTree = "<group>"; };
 		31ABF6C1268D106100059AD1 /* CountryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEndpoint.swift; sourceTree = "<group>"; };
-		31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRemoteDataSource.swift; sourceTree = "<group>"; };
+		31ABF6C5268D10E900059AD1 /* CurrencyListRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListRemoteDataSource.swift; sourceTree = "<group>"; };
 		31E0AD02268DF24400168256 /* CurrencyLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLocalDataSource.swift; sourceTree = "<group>"; };
 		31E0AD07268E59AC00168256 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		31E0AD0A268E5A6400168256 /* OnboardingLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLaunchView.swift; sourceTree = "<group>"; };
 		31E834D825E5BBC2007B3BCF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		31ED3F9B2683ADF000738DBE /* SymbolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRow.swift; sourceTree = "<group>"; };
+		31ED3F9B2683ADF000738DBE /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
 		31ED3F9E2683B2CB00738DBE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		31F1970225E6F92A005A15EB /* CurrencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				31508B3F25E4541A007F4CC0 /* Extension.swift */,
+				3173607D26909DB800EB4E55 /* LoadingState.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -468,7 +472,7 @@
 		31ABF6B9268CD5E600059AD1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				319A6B0B2681071B00EAD5BC /* SymbolListViewModel.swift */,
+				319A6B0B2681071B00EAD5BC /* CurrencyListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -476,8 +480,8 @@
 		31ABF6BA268CD61400059AD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				319A6B082681029200EAD5BC /* SymbolListView.swift */,
-				31ED3F9B2683ADF000738DBE /* SymbolRow.swift */,
+				319A6B082681029200EAD5BC /* CurrencyListView.swift */,
+				31ED3F9B2683ADF000738DBE /* CurrencyRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,7 +498,7 @@
 		31ABF6C4268D10CC00059AD1 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
-				31ABF6C5268D10E900059AD1 /* CountryRemoteDataSource.swift */,
+				31ABF6C5268D10E900059AD1 /* CurrencyListRemoteDataSource.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -718,22 +722,23 @@
 				31E0AD08268E59AD00168256 /* OnboardingView.swift in Sources */,
 				31508B3825E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31ABF68D268CC02000059AD1 /* Request.swift in Sources */,
-				31ED3F9C2683ADF000738DBE /* SymbolRow.swift in Sources */,
+				31ED3F9C2683ADF000738DBE /* CurrencyRow.swift in Sources */,
 				31ABF6A6268CD2D300059AD1 /* XaalissCurrencyConverterView.swift in Sources */,
+				3173607E26909DB800EB4E55 /* LoadingState.swift in Sources */,
 				31ABF69C268CC5E400059AD1 /* CurrencyEndpoint.swift in Sources */,
 				31ED3F9F2683B2CB00738DBE /* Country.swift in Sources */,
-				319A6B0C2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */,
+				319A6B0C2681071B00EAD5BC /* CurrencyListViewModel.swift in Sources */,
 				31E0AD03268DF24400168256 /* CurrencyLocalDataSource.swift in Sources */,
 				31F1970325E6F92A005A15EB /* CurrencyButtonView.swift in Sources */,
 				31ABF6BF268D102700059AD1 /* CountryRequest.swift in Sources */,
-				319A6B092681029200EAD5BC /* SymbolListView.swift in Sources */,
+				319A6B092681029200EAD5BC /* CurrencyListView.swift in Sources */,
 				31508B1A25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
 				31E0AD0B268E5A6400168256 /* OnboardingLaunchView.swift in Sources */,
 				319A6B0F2681073800EAD5BC /* Symbol.swift in Sources */,
 				31E834D925E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31508B4025E4541A007F4CC0 /* Extension.swift in Sources */,
 				31ABF691268CC07E00059AD1 /* ApiClient.swift in Sources */,
-				31ABF6C6268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */,
+				31ABF6C6268D10E900059AD1 /* CurrencyListRemoteDataSource.swift in Sources */,
 				31ABF69A268CC5A200059AD1 /* CurrencyRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,7 +748,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31508B4825E46380007F4CC0 /* KeyPadRow.swift in Sources */,
-				31ABF6C7268D10E900059AD1 /* CountryRemoteDataSource.swift in Sources */,
+				31ABF6C7268D10E900059AD1 /* CurrencyListRemoteDataSource.swift in Sources */,
 				31508B4F25E465FE007F4CC0 /* KeyPad.swift in Sources */,
 				31ABF6B3268CD4BA00059AD1 /* CoreDataHelper.swift in Sources */,
 				31D1DA8125EECC7000B484CB /* XaalisWecceViewModel.swift in Sources */,
@@ -752,18 +757,19 @@
 				31D1DA8625EECC7400B484CB /* CurrencyButtonView.swift in Sources */,
 				31ABF6C0268D102700059AD1 /* CountryRequest.swift in Sources */,
 				31ABF6B0268CD49B00059AD1 /* DBHelper.swift in Sources */,
-				31ED3F9D2683ADF000738DBE /* SymbolRow.swift in Sources */,
+				31ED3F9D2683ADF000738DBE /* CurrencyRow.swift in Sources */,
 				31ED3FA02683B2CB00738DBE /* Country.swift in Sources */,
-				319A6B0D2681071B00EAD5BC /* SymbolListViewModel.swift in Sources */,
+				319A6B0D2681071B00EAD5BC /* CurrencyListViewModel.swift in Sources */,
 				31508B3925E44E2D007F4CC0 /* KeyPadButton.swift in Sources */,
 				31E0AD0C268E5A6400168256 /* OnboardingLaunchView.swift in Sources */,
-				319A6B0A2681029200EAD5BC /* SymbolListView.swift in Sources */,
+				319A6B0A2681029200EAD5BC /* CurrencyListView.swift in Sources */,
 				31ABF6AD268CD47800059AD1 /* PersistenceController.swift in Sources */,
 				31508B1B25E44A77007F4CC0 /* xaalis_wecceApp.swift in Sources */,
 				319A6B102681073800EAD5BC /* Symbol.swift in Sources */,
 				31E834DA25E5BBC2007B3BCF /* Currency.swift in Sources */,
 				31ABF6C3268D106100059AD1 /* CountryEndpoint.swift in Sources */,
 				31508B4125E4541A007F4CC0 /* Extension.swift in Sources */,
+				3173607F26909DB800EB4E55 /* LoadingState.swift in Sources */,
 				31E0AD09268E59AD00168256 /* OnboardingView.swift in Sources */,
 				31ABF6AA268CD45000059AD1 /* Xaaliss.xcdatamodeld in Sources */,
 			);

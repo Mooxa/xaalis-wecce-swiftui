@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct SymbolRow: View {
+struct CurrencyRow: View {
   let currency: CurrencyRate
   @State var selected: Bool = false
-  @ObservedObject var viewModel = SymbolListViewModel()
+  @ObservedObject var viewModel = CurrencyListViewModel()
   var saveCurrencyCode: ((_ currencyName: String, _ currencyCode: String) -> Void)
   
   var body: some View {
@@ -19,7 +19,7 @@ struct SymbolRow: View {
       Text("\(currency.name) - ")
         .font(.headline)
         .multilineTextAlignment(.leading)
-      Text(viewModel.getCurrencyName(currency.name) ?? "")
+      Text(currency.name.getCurrencyName() ?? "")
         .foregroundColor(.secondary)
       Spacer()
       Image(systemName: selected || viewModel.isSaving(code: currency.name) ? "checkmark.circle" : "plus.circle")
@@ -27,7 +27,7 @@ struct SymbolRow: View {
         .font(.system(size: 25))
         .onTapGesture {
           self.selected = true
-          saveCurrencyCode(viewModel.getCurrencyName(currency.name) ?? "", currency.name)
+          saveCurrencyCode(currency.name.getCurrencyName() ?? "", currency.name)
         }
     }
     .padding(6)

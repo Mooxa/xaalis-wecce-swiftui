@@ -1,4 +1,4 @@
-//
+  //
   //  Currency.swift
   //  xaalis-wecce
   //
@@ -13,11 +13,15 @@ struct Currency: Decodable {
   let base, date: String
   let rates: [String: Double]
   var currenciesRate: [CurrencyRate] {
-    var currencyRate = [CurrencyRate]()
-    for (key, value) in rates {
-      currencyRate.append(CurrencyRate(name: key, price: value))
+    get {
+      var currencyRate = [CurrencyRate]()
+      for (key, value) in rates.sorted(by: <) {
+        currencyRate.append(CurrencyRate(name: key, price: value))
+      }
+      return currencyRate
     }
-    return currencyRate
+    set {  }
+
   }
 }
 

@@ -14,8 +14,9 @@ struct CurrencyButtonView: View {
     //    @Binding var isShow: String
   var body: some View {
     let flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    
     ScrollView {
-      self.itemView(rate: self.currencies.currenciesRate[selection])
+      CurrencybuttonChartView(rate: self.$currencies.currenciesRate[selection], price: $price)
         .padding()
 
       LazyVGrid(columns: flexibleLayout, spacing: 5) {
@@ -59,7 +60,7 @@ struct CurrencyButtonView: View {
           Spacer()
           Text("\(priceCurrency)")
             .font(.system(size: 20))
-            .fontWeight(.bold)
+            .fontWeight(.light)
             .foregroundColor(Color.blue)
           Spacer()
           Text(currencies.date)

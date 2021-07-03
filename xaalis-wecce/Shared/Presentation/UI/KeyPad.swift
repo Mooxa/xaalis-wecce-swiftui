@@ -12,10 +12,10 @@ struct KeyPad: View {
 
   var body: some View {
     VStack {
-      KeyPadRow(keys: ["1", "2", "3", "+"])
-      KeyPadRow(keys: ["4", "5", "6", "-"])
-      KeyPadRow(keys: ["7", "8", "9", "x"])
-      KeyPadRow(keys: [".", "0", "⌫", "÷"])
+      KeyPadRow(keys: ["1", "2", "3"])
+      KeyPadRow(keys: ["4", "5", "6"])
+      KeyPadRow(keys: ["7", "8", "9"])
+      KeyPadRow(keys: [".", "0", "⌫"])
     }
     .background(.clear)
     .environment(\.keyPadButtonAction, self.keyWasPressed(_:))
@@ -28,7 +28,7 @@ struct KeyPad: View {
     case "⌫":
       string.removeLast()
       if string.isEmpty { string = "1" }
-//    case _ where string. == "1": string = key
+//    case "+" where string. == "1": string = key
     default: string += key
     }
   }

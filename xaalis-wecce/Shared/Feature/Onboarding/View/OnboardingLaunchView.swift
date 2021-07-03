@@ -16,8 +16,8 @@ struct OnboardingLaunchView: View {
         OnboardingView()
       } else if viewlaunch.currentPage == "ContentView" {
         ContentView()
-      } else if viewlaunch.currentPage == "SymbolListView"{
-        SymbolListView()
+      } else if viewlaunch.currentPage == "CurrencyListView"{
+        CurrencyListView()
       }
     }
   }

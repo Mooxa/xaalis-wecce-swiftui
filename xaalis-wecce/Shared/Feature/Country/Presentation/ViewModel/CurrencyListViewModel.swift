@@ -8,13 +8,13 @@
 import Foundation
 import Combine
 
-class SymbolListViewModel: ObservableObject {
-  var countryRemoteDataSource = CountryRemoteDataSource()
+class CurrencyListViewModel: ObservableObject {
+  var currencyListRemoteDataSource = CurrencyListRemoteDataSource()
   var currencyLocalDataSource = CurrencyLocalDataSource()
   @Published var allCurrencies: [CurrencyRate] = []
   
   func fetchCountry() {
-    countryRemoteDataSource.getCountryList { result in
+    currencyListRemoteDataSource.getCountryList { result in
       switch result {
       case .success(let allCurrencies):
         self.allCurrencies = allCurrencies.currenciesRate
@@ -22,11 +22,6 @@ class SymbolListViewModel: ObservableObject {
         print(error)
       }
     }
-  }
-  func getCurrencyName(_ code: String) -> String? {
-    let locale: Locale = .current
-    let currency = locale.localizedString(forCurrencyCode: code)
-    return currency
   }
 
   func saveCurrencyLocally(currencyName: String, currencyCode: String) {
